@@ -48,17 +48,7 @@ in
     ];
     environment.systemPackages = utils.removePackagesByName (
       with pkgs;
-      (
-        if lib.versionAtLeast lib.version "24.11" then
-          [
-            adwaita-icon-theme
-          ]
-        else
-          [
-            gnome.adwaita-icon-theme
-          ]
-      )
-      ++ [
+       [
         alsa-utils
         cosmic-applets
         cosmic-applibrary
